@@ -1,0 +1,105 @@
+/* css for navbar except homepage navbar  */
+.main_header_links {
+  background-color: #061e3d;
+}
+
+.navbar_header {
+  width: 100%;
+  min-height: 80px;
+  padding: 30px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_header .logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar_header .links {
+  list-style: none;
+  display: flex;
+  color: #d9d2c3;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.navbar_header .links li {
+  margin: 0 15px;
+  display: inline;
+  font-size: 17px;
+  color: white;
+  font-weight: 300;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar_header .links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar_header .toggle-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar_header {
+    position: relative;
+    transition: 0.5s all ease-in-out;
+    background-color: #01061d;
+  }
+  .navbar.expanded {
+    height: 100vh;
+    z-index: 1;
+  }
+  .navbar.expanded .links {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+  .navbar.expanded .links li {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  .navbar_header .logo {
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
+  .navbar_header .toggle-icon {
+    display: block;
+    color: #d9d2c3;
+    position: absolute;
+    top: 28px;
+    right: 20px;
+  }
+  .navbar_header .links {
+    position: absolute;
+    top: -300px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    padding-left: 0px;
+  }
+  .navbar_header .links li {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+}
